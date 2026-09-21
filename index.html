@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Etiquetas SEO y Open Graph (CRÍTICO) -->
+    <title>Taylor Ramírez Arango | Plan de Gobierno Cabana 2027-2030</title>
+    <meta name="description" content="Recuperemos Cabana y Sondondo, Juntos. Conoce mis propuestas: Turismo de Aventura, Marca Guerraspampa y Desarrollo Productivo. ¡Marca el Cóndor!">
+    
+    <!-- Open Graph para WhatsApp / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Taylor Ramírez Arango | Plan de Gobierno Cabana 2027-2030">
+    <meta property="og:description" content="Recuperemos Cabana y Sondondo, Juntos. Conoce mis propuestas: Turismo de Aventura, Marca Guerraspampa y Desarrollo Productivo. ¡Marca el Cóndor!">
+    <meta property="og:image" content="perfil.jpg">
+    <!-- Se recomienda incluir og:url cuando se despliegue a producción -->
+    <meta property="og:url" content="">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Variables de diseño: Colores del partido (Libertad Popular) */
+        :root {
+            --amarillo: #FFCC00;
+            --negro: #000000;
+            --blanco: #ffffff;
+            --fondo-claro: #f8f9fa;
+            --texto-oscuro: #212529;
+            --texto-muted: #495057;
+            --radio-bordes: 20px;
+            --sombra-suave: 0 15px 30px rgba(0,0,0,0.06);
+            --transicion: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        /* Reseteo básico y Mobile First */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--fondo-claro);
+            color: var(--texto-oscuro);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* ----- HEADER ----- */
+        header {
+            background-color: var(--blanco);
+            padding: 3rem 1rem;
+            text-align: center;
+            border-bottom: 6px solid var(--amarillo);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.2rem;
+        }
+
+        .perfil-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--amarillo);
+            box-shadow: var(--sombra-suave);
+        }
+
+        .candidato-nombre {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--negro);
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            line-height: 1.1;
+        }
+
+        .candidato-cargo {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--negro);
+            background-color: var(--amarillo);
+            padding: 0.6rem 1.8rem;
+            border-radius: 50px;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(255, 204, 0, 0.3);
+        }
+
+        /* ----- HERO / SLOGAN ----- */
+        .hero {
+            text-align: center;
+            padding: 5rem 1rem;
+            background: linear-gradient(145deg, #111111 0%, var(--negro) 100%);
+            color: var(--blanco);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: var(--fondo-claro);
+            transform: skewY(-2deg);
+        }
+
+        .slogan-principal {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--amarillo);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            position: relative;
+            z-index: 2;
+        }
+
+        .slogan-secundario {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.9);
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ----- PILARES DEL PLAN (GRID) ----- */
+        .pilares-section {
+            padding: 6rem 0;
+            position: relative;
+            z-index: 3;
+        }
+
+        .grid-pilares {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+
+        .tarjeta-pilar {
+            background-color: var(--blanco);
+            border-radius: var(--radio-bordes);
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: var(--sombra-suave);
+            transition: var(--transicion);
+            border-top: 6px solid var(--amarillo);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tarjeta-pilar::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(255,204,0,0.05) 0%, transparent 100%);
+            opacity: 0;
+            transition: var(--transicion);
+        }
+
+        .tarjeta-pilar:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .tarjeta-pilar:hover::before {
+            opacity: 1;
+        }
+
+        .pilar-icono {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        
+        .tarjeta-pilar:hover .pilar-icono {
+            transform: scale(1.1);
+        }
+
+        .pilar-titulo {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: var(--negro);
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .pilar-texto {
+            color: var(--texto-muted);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        /* ----- LLAMADO A LA ACCIÓN (CTA) ----- */
+        .cta-section {
+            text-align: center;
+            padding: 2rem 1rem 7rem 1rem;
+        }
+
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: var(--amarillo);
+            color: var(--negro);
+            font-size: 1.3rem;
+            font-weight: 900;
+            text-decoration: none;
+            padding: 1.4rem 2.5rem;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(255, 204, 0, 0.4);
+            transition: var(--transicion);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-cta:hover {
+            background-color: var(--negro);
+            color: var(--amarillo);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ----- FOOTER ----- */
+        footer {
+            background-color: var(--negro);
+            color: var(--amarillo);
+            text-align: center;
+            padding: 3rem 1rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* ----- MEDIA QUERIES (TABLET Y DESKTOP) ----- */
+        @media (min-width: 768px) {
+            .candidato-nombre { font-size: 3rem; }
+            .candidato-cargo { font-size: 1.2rem; }
+            .slogan-principal { font-size: 3.5rem; }
+            .slogan-secundario { font-size: 1.8rem; }
+            .grid-pilares { grid-template-columns: repeat(3, 1fr); }
+            .btn-cta { font-size: 1.5rem; padding: 1.5rem 3.5rem; }
+            footer { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABECERA -->
+    <header>
+        <div class="container header-content">
+            <img src="perfil.jpg" alt="Taylor Ramírez Arango" class="perfil-img">
+            <h1 class="candidato-nombre">Taylor Ramírez Arango</h1>
+            <span class="candidato-cargo">Candidato a la Alcaldía de Cabana Sur 2027-2030</span>
+        </div>
+    </header>
+
+    <!-- HERO / SLOGAN -->
+    <section class="hero">
+        <div class="container">
+            <h2 class="slogan-principal">El futuro de Cabana y Sondondo está en nuestras manos</h2>
+            <p class="slogan-secundario">Recuperemos Cabana & Sondondo, juntos</p>
+        </div>
+    </section>
+
+    <!-- PILARES DEL PLAN -->
+    <section class="pilares-section">
+        <div class="container">
+            <div class="grid-pilares">
+                
+                <!-- Pilar 1 -->
+                <article class="tarjeta-pilar">
+                    <div class="pilar-icono">🏕️</div>
+                    <h3 class="pilar-titulo">Turismo de Aventura</h3>
+                    <p class="pilar-texto">Impulso del Canopy, Bungee de catapulta y Ciclismo de Alta Montaña para dinamizar la economía local.</p>
+                </article>
+
+                <!-- Pilar 2 -->
+                <article class="tarjeta-pilar">
+                    <div class="pilar-icono">🎭</div>
+                    <h3 class="pilar-titulo">Cultura e Identidad</h3>
+                    <p class="pilar-texto">Posicionamiento de la Marca <strong>"Guerraspampa"</strong> y puesta en valor de nuestra mítica Danza de Tijeras.</p>
+                </article>
+
+                <!-- Pilar 3 -->
+                <article class="tarjeta-pilar">
+                    <div class="pilar-icono">🌾</div>
+                    <h3 class="pilar-titulo">Desarrollo Productivo</h3>
+                    <p class="pilar-texto">Creación del Mercado Central del Valle de Sondondo y desarrollo de la cadena productiva de fibra de alpaca.</p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LLAMADO A LA ACCIÓN (CTA) -->
+    <section class="cta-section">
+        <div class="container">
+            <a href="plan-gobierno.pdf" target="_blank" rel="noopener noreferrer" class="btn-cta">
+                📄 Leer Plan de Gobierno Completo
+            </a>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <div class="container">
+            Elecciones 2026 | Este 04 de Octubre marca el CÓNDOR de Libertad Popular
+        </div>
+    </footer>
+
+</body>
+</html>
