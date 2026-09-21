@@ -149,20 +149,23 @@
 
         .grid-pilares {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 2.5rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.2rem;
         }
 
         .tarjeta-pilar {
             background-color: var(--blanco);
             border-radius: var(--radio-bordes);
-            padding: 3rem 2rem;
+            padding: 2rem 1.2rem;
             text-align: center;
             box-shadow: var(--sombra-suave);
             transition: var(--transicion);
-            border-top: 6px solid var(--amarillo);
+            border-top: 5px solid var(--amarillo);
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
         }
 
         .tarjeta-pilar::before {
@@ -178,8 +181,8 @@
         }
 
         .tarjeta-pilar:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transform: translateY(-6px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
         }
 
         .tarjeta-pilar:hover::before {
@@ -187,8 +190,8 @@
         }
 
         .pilar-icono {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
             display: inline-block;
             transition: transform 0.3s ease;
         }
@@ -198,17 +201,18 @@
         }
 
         .pilar-titulo {
-            font-size: 1.6rem;
+            font-size: 1.25rem;
             font-weight: 900;
             color: var(--negro);
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             letter-spacing: -0.5px;
+            line-height: 1.2;
         }
 
         .pilar-texto {
             color: var(--texto-muted);
-            font-size: 1.05rem;
-            line-height: 1.7;
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
 
         /* ----- LLAMADO A LA ACCIÓN (CTA) ----- */
@@ -274,7 +278,7 @@
             .candidato-cargo { font-size: 1.2rem; }
             .slogan-principal { font-size: 3.5rem; }
             .slogan-secundario { font-size: 1.8rem; }
-            .grid-pilares { grid-template-columns: repeat(3, 1fr); }
+            .grid-pilares { grid-template-columns: repeat(4, 1fr); gap: 2rem; }
             .btn-cta { font-size: 1.5rem; padding: 1.5rem 3.5rem; }
             footer { font-size: 1.4rem; }
         }
@@ -308,21 +312,56 @@
                 <article class="tarjeta-pilar">
                     <div class="pilar-icono">🏕️</div>
                     <h3 class="pilar-titulo">Turismo de Aventura</h3>
-                    <p class="pilar-texto">Impulso del Canopy, Bungee de catapulta y Ciclismo de Alta Montaña para dinamizar la economía local.</p>
+                    <p class="pilar-texto">Impulso de Canopy, Bungee de catapulta y Ciclismo de Alta Montaña.</p>
                 </article>
 
                 <!-- Pilar 2 -->
                 <article class="tarjeta-pilar">
                     <div class="pilar-icono">🎭</div>
                     <h3 class="pilar-titulo">Cultura e Identidad</h3>
-                    <p class="pilar-texto">Posicionamiento de la Marca <strong>"Guerraspampa"</strong> y puesta en valor de nuestra mítica Danza de Tijeras.</p>
+                    <p class="pilar-texto">Posicionamiento de la marca <strong>'Guerraspampa'</strong> y la Danza de Tijeras.</p>
                 </article>
 
                 <!-- Pilar 3 -->
                 <article class="tarjeta-pilar">
                     <div class="pilar-icono">🌾</div>
                     <h3 class="pilar-titulo">Desarrollo Productivo</h3>
-                    <p class="pilar-texto">Creación del Mercado Central del Valle de Sondondo y desarrollo de la cadena productiva de fibra de alpaca.</p>
+                    <p class="pilar-texto">Mercado Central de Acopio y cadena textil de fibra de alpaca.</p>
+                </article>
+
+                <!-- Pilar 4 -->
+                <article class="tarjeta-pilar">
+                    <div class="pilar-icono">🛣️</div>
+                    <h3 class="pilar-titulo">Sistema Vial y Urbano</h3>
+                    <p class="pilar-texto">Creación de un Anillo Vial y el Paseo Peatonal 'Felipe Huamán Poma de Ayala'.</p>
+                </article>
+
+                <!-- Pilar 5 -->
+                <article class="tarjeta-pilar">
+                    <div class="pilar-icono">⚽</div>
+                    <h3 class="pilar-titulo">Deporte y Juventud</h3>
+                    <p class="pilar-texto">Estadio en Hastawarmi, escuelas deportivas y la 'Casa de la Juventud'.</p>
+                </article>
+
+                <!-- Pilar 6 -->
+                <article class="tarjeta-pilar">
+                    <div class="pilar-icono">♻️</div>
+                    <h3 class="pilar-titulo">Gestión Ambiental</h3>
+                    <p class="pilar-texto">Cierre del botadero de Huasaputo y construcción del Relleno Sanitario.</p>
+                </article>
+
+                <!-- Pilar 7 -->
+                <article class="tarjeta-pilar">
+                    <div class="pilar-icono">🎵</div>
+                    <h3 class="pilar-titulo">Escuela de Música</h3>
+                    <p class="pilar-texto">Creación de la Escuela Municipal de Música para potenciar talentos locales.</p>
+                </article>
+
+                <!-- Pilar 8 -->
+                <article class="tarjeta-pilar">
+                    <div class="pilar-icono">🏛️</div>
+                    <h3 class="pilar-titulo">Transformación Institucional</h3>
+                    <p class="pilar-texto">Gobierno digital, transparencia y gestión eficiente orientada a resultados.</p>
                 </article>
 
             </div>
