@@ -212,6 +212,9 @@
             color: var(--texto-muted);
             font-size: 0.95rem;
             line-height: 1.5;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
         
         .pilar-texto ul {
@@ -223,6 +226,49 @@
 
         .pilar-texto li {
             margin-bottom: 0.4rem;
+        }
+
+        /* ----- DETALLES DESPLEGABLES ----- */
+        details.ver-mas {
+            margin-top: auto;
+            text-align: left;
+        }
+        details.ver-mas summary {
+            list-style: none;
+            cursor: pointer;
+            background-color: var(--fondo-claro);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-top: 0.8rem;
+            display: inline-block;
+            color: var(--texto-oscuro);
+            transition: var(--transicion);
+            border: 1px solid rgba(0,0,0,0.05);
+            user-select: none;
+        }
+        details.ver-mas summary::-webkit-details-marker {
+            display: none;
+        }
+        details.ver-mas summary:hover {
+            background-color: var(--amarillo);
+            transform: scale(1.03);
+        }
+        details.ver-mas[open] summary {
+            background-color: var(--amarillo);
+        }
+        .texto-abierto { display: none; }
+        details.ver-mas[open] .texto-cerrado { display: none; }
+        details.ver-mas[open] .texto-abierto { display: inline; }
+        
+        details.ver-mas .contenido-oculto {
+            margin-top: 0.5rem;
+            animation: fadeInDown 0.3s ease-out;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         /* ----- LLAMADO A LA ACCIÓN (CTA) ----- */
@@ -353,8 +399,15 @@
                             <li>Impulso en cadena productiva de fibra de alpaca, hilo, textil.</li>
                             <li>Gestionar e impulsar el proyecto "Wasiymi" (Casitas calientes) para los crianderos y moyas de las alturas del distrito.</li>
                             <li>Mantenimiento de las trochas carrozables.</li>
-                            <li>Gestión para el mejoramiento genético y cuidado de camélidos.</li>
                         </ul>
+                        <details class="ver-mas">
+                            <summary><span class="texto-cerrado">+ Ver más detalles</span><span class="texto-abierto">- Ver menos detalles</span></summary>
+                            <div class="contenido-oculto">
+                                <ul>
+                                    <li>Gestión para el mejoramiento genético y cuidado de camélidos.</li>
+                                </ul>
+                            </div>
+                        </details>
                     </div>
                 </article>
 
@@ -377,8 +430,19 @@
                     <h3 class="pilar-titulo">INFRAESTRUCTURA</h3>
                     <div class="pilar-texto">
                         <ul>
-                            <li>Mejoramientos: Ruedos, mercado de Cabana, Terminal Terrestre, Estadio de Hastawarmi, grass sintético (SS.HH., lavaderos, duchas), cementerios de Cabana - Sondondo, grass sintético y mejoramiento de calles para Sondondo, y pistas y veredas en el área urbana Cabana - Sondondo.</li>
+                            <li>Ruedos y mercado de Cabana.</li>
+                            <li>Terminal Terrestre y Estadio de Hastawarmi.</li>
+                            <li>Grass sintético (SS.HH., lavaderos, duchas) y Cementerios de Cabana - Sondondo.</li>
                         </ul>
+                        <details class="ver-mas">
+                            <summary><span class="texto-cerrado">+ Ver más detalles</span><span class="texto-abierto">- Ver menos detalles</span></summary>
+                            <div class="contenido-oculto">
+                                <ul>
+                                    <li>Grass sintético y mejoramiento de calles para Sondondo.</li>
+                                    <li>Pistas y veredas en el área urbana Cabana - Sondondo.</li>
+                                </ul>
+                            </div>
+                        </details>
                     </div>
                 </article>
 
@@ -391,10 +455,17 @@
                             <li>Centro de Innovación Tecnológica del Valle de Sondondo (programación, IA, marketing digital, comercio electrónico, drones, energías renovables, etc.).</li>
                             <li>Implementación de Casa de Talentos (música, manualidades, canto, danza, ballet, oratoria, etc.).</li>
                             <li>Academia preuniversitaria virtual para el ingreso a diferentes universidades.</li>
-                            <li>Implementación de tensoestructuras (coberturas de techo) en los tres niveles educativos (inicial, primaria y secundaria).</li>
-                            <li>Implementación de juegos recreativos en las instituciones educativas de inicial y primaria.</li>
-                            <li>Implementación de un parque recreativo con juegos recreativos y gimnasio al aire libre.</li>
                         </ul>
+                        <details class="ver-mas">
+                            <summary><span class="texto-cerrado">+ Ver más detalles</span><span class="texto-abierto">- Ver menos detalles</span></summary>
+                            <div class="contenido-oculto">
+                                <ul>
+                                    <li>Implementación de tensoestructuras (coberturas de techo) en los tres niveles educativos (inicial, primaria y secundaria).</li>
+                                    <li>Implementación de juegos recreativos en las instituciones educativas de inicial y primaria.</li>
+                                    <li>Implementación de un parque recreativo con juegos recreativos y gimnasio al aire libre.</li>
+                                </ul>
+                            </div>
+                        </details>
                     </div>
                 </article>
 
@@ -407,9 +478,16 @@
                             <li>Equipamiento del centro de salud (Cabana y Sondondo) / MEDIANO PLAZO.</li>
                             <li>Mejoramiento de infraestructura del puesto de salud (Cabana y Sondondo).</li>
                             <li>Mantenimiento del sistema de agua potable y alcantarillado.</li>
-                            <li>Monitoreo del agua potable y aguas residuales.</li>
-                            <li>Seguimiento y control en la alimentación de los tres niveles educativos (inicial, primaria y secundaria), gestantes y adulto mayor.</li>
                         </ul>
+                        <details class="ver-mas">
+                            <summary><span class="texto-cerrado">+ Ver más detalles</span><span class="texto-abierto">- Ver menos detalles</span></summary>
+                            <div class="contenido-oculto">
+                                <ul>
+                                    <li>Monitoreo del agua potable y aguas residuales.</li>
+                                    <li>Seguimiento y control en la alimentación de los tres niveles educativos (inicial, primaria y secundaria), gestantes y adulto mayor.</li>
+                                </ul>
+                            </div>
+                        </details>
                     </div>
                 </article>
 
@@ -422,8 +500,15 @@
                             <li>Implementación de ciclismo de alta montaña: Ruta Oscconta – Saywa – Wanzo – Huantaymisa – Condorsencca – Sondondo, finalizando en Cabana.</li>
                             <li>Mejoramiento de la casa de Felipe Guamán Poma, puesto en valor como museo del valle.</li>
                             <li>Implementación de jardín botánico en la Catarata Limayhuacho, recordando el nombre “Huaytahuerta”.</li>
-                            <li>Implementación del mirador ruta - alameda Willcaccahuana – Quichipata – Tukuhuasi y Wanzo.</li>
                         </ul>
+                        <details class="ver-mas">
+                            <summary><span class="texto-cerrado">+ Ver más detalles</span><span class="texto-abierto">- Ver menos detalles</span></summary>
+                            <div class="contenido-oculto">
+                                <ul>
+                                    <li>Implementación del mirador ruta - alameda Willcaccahuana – Quichipata – Tukuhuasi y Wanzo.</li>
+                                </ul>
+                            </div>
+                        </details>
                     </div>
                 </article>
 
